@@ -273,6 +273,12 @@ extern "C" {
     pub fn EVP_chacha20() -> *const ::EVP_CIPHER;
     #[cfg(ossl110)]
     pub fn EVP_chacha20_poly1305() -> *const ::EVP_CIPHER;
+    #[cfg(ossl111)]
+    pub fn EVP_camellia_128_cfb128() -> *const ::EVP_CIPHER;
+    #[cfg(ossl111)]
+    pub fn EVP_camellia_192_cfb128() -> *const ::EVP_CIPHER;
+    #[cfg(ossl111)]
+    pub fn EVP_camellia_256_cfb128() -> *const ::EVP_CIPHER;
 
     #[cfg(not(ossl110))]
     pub fn OPENSSL_add_all_algorithms_noconf();
